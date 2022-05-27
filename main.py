@@ -201,26 +201,30 @@ for _ in itertools.repeat(None, num):
      
  elif timer < 1800 :
    if sellcount == 20 or sellcount > 20 : # does the sell 
-       print(sellcount)
+       print('timer',timer)
+       print('sell',sellcount)
+       print('count',count)
        sell()
        deposit()
-       clock3
+       timer = timer + 88
        sellcount = 0
 
    elif sellcount < 20 :    
      if count == 5 : # does the deposit into discord
-       print(sellcount)  
-       print(count)
+       print('timer',timer)  
+       print('sell',sellcount)  
+       print('count',count)
        sendSpambot()
        deposit()
-       clock2()
+       timer = timer + 45
        count = 0
 
      elif count < 5 : # does the comands into discord
-       print(sellcount) 
-       print (count)
+       print('timer',timer)  
+       print('sell',sellcount)
+       print('count',count)
        sendSpambot()
-       clock1()
+       timer = timer + 35
        count = count + 1 # does the count + 1
        sellcount = sellcount + 1 # does the count of sell + 1 
   
